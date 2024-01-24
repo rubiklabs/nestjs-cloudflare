@@ -1,0 +1,78 @@
+{
+  "name": "nestjs-cloudflare",
+  "version": "1.0.0",
+  "description": "Cloudflare API Client for NestJS",
+  "author": "Halil Safa SAĞLIK <safa@rubiklabs.com>",
+  "maintainers": [
+    "Halil Safa SAĞLIK <safa@rubiklabs.com> (https://ogeday26.com)",
+    "Tunahan İPEK <tunahan@rubiklabs.com> (https://tunahanipek.com)",
+    "Berat OK <berat@rubiklabs.com> (https://beratok.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubiklabs/nestjs-cloudflare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubiklabs/nestjs-cloudflare/issues"
+  },
+  "private": false,
+  "keywords": [
+    "nestjs",
+    "cloudflare",
+    "cloudflare-client-sdk",
+    "nestjs-cloudflare",
+    "nestjs-cloudflare-client"
+  ],
+  "source": "lib/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc && npm run build:index",
+    "build:index": "rimraf ./index.js ./index.d.ts && tsc -d --skipLibCheck ./index.ts",
+    "format": "prettier **/**/*.ts --ignore-path ./.prettierignore --write && git status",
+    "prepublishOnly": "npm run format && npm run build",
+    "postversion": "git push && git push --tags",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/core": "^9.0.0"
+  },
+  "dependencies": {
+    "@nestjs/axios": "^3.0.1",
+    "axios": "^1.6.5",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.3.0",
+    "@nestjs/core": "^10.3.0",
+    "@nestjs/testing": "^10.3.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.0",
+    "pinst": "^3.0.0",
+    "prettier": "^3.2.4",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "homepage": "https://github.com/rubiklabs/nestjs-cloudflare#readme",
+  "directories": {
+    "lib": "lib"
+  }
+}
