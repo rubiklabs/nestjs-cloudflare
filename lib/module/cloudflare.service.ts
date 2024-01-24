@@ -15,5 +15,27 @@ export class CloudflareService {
   constructor(
     @Inject(MODULE_OPTIONS_TOKEN) private options: CloudflareModuleOptions,
     private readonly httpService: HttpService,
-  ) {}
+  ) {
+  }
+
+  getZonesByZoneIdApiGatewayDiscovery = async (zoneId: string): Promise<boolean> => {
+    this.httpService.get(this.url + `/zones/${zoneId}/api_gateway/discovery`)
+    return true;
+  }
+
+  getZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: string): Promise<boolean> => {
+    this.httpService.get(this.url + `/zones/${zoneId}/api_gateway/discovery/operations`)
+    return true;
+  }
+
+  patchZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: string): Promise<boolean> => {
+    this.httpService.patch(this.url + `/zones/${zoneId}/api_gateway/discovery/operations`)
+    return true;
+  }
+
+  patchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationId = async (zoneId: string, operationId: string): Promise<boolean> => {
+    this.httpService.patch(this.url + `/zones/${zoneId}/api_gateway/discovery/operations/${operationId}`)
+    return true;
+  }
+
 }
