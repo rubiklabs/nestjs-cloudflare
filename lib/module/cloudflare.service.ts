@@ -1,6 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { CloudflareModuleOptions, MODULE_OPTIONS_TOKEN } from "../utils";
 import { HttpService } from "@nestjs/axios";
+import { IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams, IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse, IGetZonesByZoneIdApiGatewayDiscoveryParams, IGetZonesByZoneIdApiGatewayDiscoveryResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams } from "./index.d"
 
 @Injectable()
 export class CloudflareService {
@@ -18,24 +19,67 @@ export class CloudflareService {
   ) {
   }
 
-  getZonesByZoneIdApiGatewayDiscovery = async (zoneId: string): Promise<boolean> => {
+  getZonesByZoneIdApiGatewayDiscovery = async (zoneId: IGetZonesByZoneIdApiGatewayDiscoveryParams): Promise<IGetZonesByZoneIdApiGatewayDiscoveryResponse> => {
     this.httpService.get(this.url + `/zones/${zoneId}/api_gateway/discovery`)
-    return true;
+    return {
+      data: {
+        result: {
+          schemas: [],
+          timestamp: '',
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
   }
 
-  getZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: string): Promise<boolean> => {
+  getZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams): Promise<IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse> => {
     this.httpService.get(this.url + `/zones/${zoneId}/api_gateway/discovery/operations`)
-    return true;
+    return {
+      data: {
+        result: [],
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 0,
+          page: 0,
+          per_page: 0,
+          total_count: 0,
+        }
+      }
+    };
   }
-
-  patchZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: string): Promise<boolean> => {
+  patchZonesByZoneIdApiGatewayDiscoveryOperations = async (zoneId: IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams): Promise<IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse> => {
     this.httpService.patch(this.url + `/zones/${zoneId}/api_gateway/discovery/operations`)
-    return true;
+    return {
+      data: {
+        result: [],
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 0,
+          page: 0,
+          per_page: 0,
+          total_count: 0,
+        }
+      }
+    };
   }
 
-  patchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationId = async (zoneId: string, operationId: string): Promise<boolean> => {
-    this.httpService.patch(this.url + `/zones/${zoneId}/api_gateway/discovery/operations/${operationId}`)
-    return true;
+  patchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationId = async ({ zone_id, operation_id }: IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams): Promise<IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse> => {
+    this.httpService.patch(this.url + `/zones/${zone_id}/api_gateway/discovery/operations/${operation_id}`)
+    return {
+      data: {
+        result: {
+          state: '',
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
   }
-
 }
