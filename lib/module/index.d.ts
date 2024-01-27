@@ -1,26 +1,90 @@
+/**
+ * Retrieve the most up to date view of discovered operations, rendered as OpenAPI schemas.
+ */
 export interface IGetZonesByZoneIdApiGatewayDiscoveryParams {
+  /**
+   * Zone ID
+   * @type {string}
+   * @readonly
+   * @description <= 32 characters
+   * @example 023e105f4ecef8ad9ca31a8372d0c353
+   */
   zone_id: string;
 }
 
+/**
+ * Retrieve discovered operations on a zone, rendered as OpenAPI schemas response.
+ */
 export interface IGetZonesByZoneIdApiGatewayDiscoveryResponse {
   data: {
+    /**
+     * @type {object}
+     * @returns Any of: object
+     */
     result: {
+      /**
+       * @type {Array<object>}
+       */
       schemas: Array<object>,
+      /**
+       * @type {string<date-time>}
+       * @example 2019-01-01T05:20:00.12345Z
+       */
       timestamp: string,
     },
+    /**
+     * @type {Array<object>}
+     * @example []
+     */
     errors: Array<{
+      /**
+       * @type {number}
+       * @description <= 1000
+       * @example 1000
+       */
       code: number,
+      /**
+       * @type {string}
+       */
       message: string,
     }>,
+    /**
+     * @type {Array<object>}
+     * @example []
+     */
     messages: Array<{
+      /**
+       * @type {number}
+       * @description <= 1000
+       * @example 1000
+       */
       code: number,
+      /**
+       * @type {string}
+       */
       message: string,
     }>,
+    /**
+     * @type {boolean}
+     * @description Whether the API call was successful.
+     * @example true
+     */
     success: boolean,
   }
 }
 
+/**
+ * Retrieve the most up to date view of discovered operations.
+ * @param {IGetZonesByZoneIdApiGatewayDiscoveryParams} params
+ */
 export interface IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams {
+  /**
+   * Zone ID
+   * @type {string}
+   * @readonly
+   * @description <= 32 characters
+   * @example 023e105f4ecef8ad9ca31a8372d0c353
+   */
   zone_id: string;
   diff?: boolean;
   direction?: string;
@@ -406,7 +470,6 @@ export interface IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdParams {
 
 export interface IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdResponse {
   data: {
-
     errors: Array<{
       code: number,
       message: string,
@@ -647,7 +710,7 @@ export interface IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse {
       code: number,
       message: string,
     }>,
-    
+
     success: boolean,
   }
 }
@@ -675,7 +738,7 @@ export interface IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse {
       code: number,
       message: string,
     }>,
-    
+
     success: boolean,
   }
 }
@@ -683,12 +746,12 @@ export interface IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse {
 export interface IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsParams {
   schema_id: string,
   zone_id: string,
-  endpoint:string, 
-  feature: Array<string>, 
-  host: Array<string>, 
-  method: Array<string>, 
-  operation_status: string, 
-  page?: number, 
+  endpoint: string,
+  feature: Array<string>,
+  host: Array<string>,
+  method: Array<string>,
+  operation_status: string,
+  page?: number,
   per_page?: number,
 }
 
@@ -703,7 +766,7 @@ export interface IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsRespons
       code: number,
       message: string,
     }>,
-    
+
     success: boolean,
     result_info?: {
       count: number,
@@ -711,5 +774,790 @@ export interface IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsRespons
       per_page: number,
       total_count: number,
     }
+  }
+}
+
+export interface IGetZonesByZoneIdApiGatewayConfigurationParams {
+  zone_id: string,
+  proporties?: Array<string>,
+}
+
+export interface IGetZonesByZoneIdApiGatewayConfigurationResponse {
+  data: {
+    result: {
+      auth_id_characteristics: Array<object>,
+    }
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+
+    success: boolean,
+  }
+}
+
+export interface IPutZonesByZoneIdApiGatewayConfigurationParams {
+  zone_id: string,
+  auth_id_characteristics?: Array<{
+    name: string,
+    type: string,
+  }>
+}
+
+export interface IPutZonesByZoneIdApiGatewayConfigurationResponse {
+  data: {
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    result: object,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierIntelAsnByAsnParams {
+  account_identifier: string,
+  asn: {
+    asn: number,
+    country: string,
+    description: string,
+    domain_count: number,
+    top_domains: Array<string>,
+    type: string,
+
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierIntelAsnByAsnResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsParams {
+  account_identifier: string,
+  asn: number,
+}
+
+export interface IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsResponse {
+  data: {
+    asn: number,
+    count: number,
+    ip_count_total: number,
+    page: number,
+    per_page: number,
+    subnets: Array<string>,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessBookmarksParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessBookmarksResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+export interface IDeleteAccountsByIdentifierAccessBookmarksUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessBookmarksUuidResponse {
+  data: {
+    result: {
+      id: string,
+    }
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessBookmarksUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IGetAccountsByIdentifierAccessBookmarksUuidResponse {
+  data: {
+    result: {
+      app_launcher_visible: boolean,
+      created_at: string,
+      domain: string,
+      id: any,
+      logo_url: string,
+      name: string,
+      updated_at: string,
+    }
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessBookmarksUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IPostAccountsByIdentifierAccessBookmarksUuidResponse {
+  data: {
+    result: {
+      app_launcher_visible: boolean,
+      created_at: string,
+      domain: string,
+      id: string,
+      logo_url: string,
+      name: string,
+      updated_at: string,
+    }
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessBookmarksUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IPutAccountsByIdentifierAccessBookmarksUuidResponse {
+  data: {
+    result: {
+      app_launcher_visible: boolean,
+      created_at: string,
+      domain: string,
+      id: any,
+      logo_url: string,
+      name: string,
+      updated_at: string,
+    }
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface ISelfHostedApplication {
+  allowed_idps: Array<string>,
+  app_launcher_visible: boolean,
+  auto_redirect_to_identity: boolean,
+  cors_headers: {
+    allow_all_headers: boolean,
+    allow_all_methods: boolean,
+    allow_all_origins: boolean,
+    allow_credentials: boolean,
+    allowed_headers: Array,
+    allowed_methods: Array<string>,
+    allowed_origins: Array,
+    max_age: number,
+  },
+  custom_deny_message: string,
+  custom_deny_url: string,
+  custom_non_identity_deny_url: string,
+  custom_pages: Array<string>,
+  domain: string,
+  enable_binding_cookie: boolean,
+  http_only_cookie_attribute: boolean,
+  logo_url: string,
+  name: string,
+  path_cookie_attribute: boolean,
+  same_site_cookie_attribute: string,
+  self_hosted_domains: Array<string>,
+  service_auth_401_redirect: boolean,
+  session_duration: string,
+  skip_interstitial: boolean,
+  tags: Array<string>,
+  type: string,
+}
+export interface ISaasApplication {
+  allowed_idps: Array<string>,
+  app_launcher_visible: boolean,
+  auto_redirect_to_identity: boolean,
+  custom_pages: Array<string>,
+  logo_url: string,
+  name: string,
+  saas_app: {
+    consumer_service_url: string,
+    custom_attributes: {
+      name: string,
+      name_format: string,
+      source: {
+        name: string,
+      }
+    },
+    default_relay_state: string,
+    idp_entity_id: string,
+    name_id_format: string,
+    public_key: string,
+    sp_entity_id: string,
+    sso_endpoint: string,
+  },
+  tags: Array<string>,
+  type: string,
+}
+export interface IBrowserSshApplication {
+  allowed_idps: Array<string>,
+  app_launcher_visible: boolean,
+  auto_redirect_to_identity: boolean,
+  cors_headers: {
+    allow_all_headers: boolean,
+    allow_all_methods: boolean,
+    allow_all_origins: boolean,
+    allow_credentials: boolean,
+    allowed_headers: Array,
+    allowed_methods: Array<string>,
+    allowed_origins: Array,
+    max_age: number,
+  },
+  custom_deny_message: string,
+  custom_deny_url: string,
+  custom_non_identity_deny_url: string,
+  custom_pages: Array<string>,
+  domain: string,
+  enable_binding_cookie: boolean,
+  http_only_cookie_attribute: boolean,
+  logo_url: string,
+  name: string,
+  path_cookie_attribute: boolean,
+  same_site_cookie_attribute: string,
+  self_hosted_domains: Array<string>,
+  service_auth_401_redirect: boolean,
+  session_duration: string,
+  skip_interstitial: boolean,
+  tags: Array<string>,
+  type: string,
+}
+export interface IBrowserVncApplication {
+  allowed_idps: Array<string>,
+  app_launcher_visible: boolean,
+  auto_redirect_to_identity: boolean,
+  cors_headers: {
+    allow_all_headers: boolean,
+    allow_all_methods: boolean,
+    allow_all_origins: boolean,
+    allow_credentials: boolean,
+    allowed_headers: Array,
+    allowed_methods: Array<string>,
+    allowed_origins: Array,
+    max_age: number,
+  },
+  custom_deny_message: string,
+  custom_deny_url: string,
+  custom_non_identity_deny_url: string,
+  custom_pages: Array<string>,
+  domain: string,
+  enable_binding_cookie: boolean,
+  http_only_cookie_attribute: boolean,
+  logo_url: string,
+  name: string,
+  path_cookie_attribute: boolean,
+  same_site_cookie_attribute: string,
+  self_hosted_domains: Array<string>,
+  service_auth_401_redirect: boolean,
+  session_duration: string,
+  skip_interstitial: boolean,
+  tags: Array<string>,
+  type: string,
+}
+export interface IAppLauncherApplication {
+  allowed_idps: Array<string>,
+  auto_redirect_to_identity: boolean,
+  session_duration: string,
+  type: string,
+}
+export interface IDeviceEnrollmentPermissionsApplication {
+  allowed_idps: Array<string>,
+  auto_redirect_to_identity: boolean,
+  session_duration: string,
+  type: string,
+}
+export interface IBrowserIsolationPermissionsApplication {
+  allowed_idps: Array<string>,
+  auto_redirect_to_identity: boolean,
+  session_duration: string,
+  type: string,
+}
+export interface IBookmarkApplication {
+  app_launcher_visible: boolean,
+  domain: string,
+  logo_url: string,
+  name: string,
+  tags: Array<string>,
+  ty
+}
+
+export interface IGetAccountsByIdentifierAccessAppsParams {
+  identifier: string,
+  app_type?: ISelfHostedApplication | ISaasApplication | IBrowserSshApplication | IBrowserVncApplication | IAppLauncherApplication | IDeviceEnrollmentPermissionsApplication | IBrowserIsolationPermissionsApplication | IBookmarkApplication,
+}
+
+export interface IGetAccountsByIdentifierAccessAppsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessAppsParams {
+  identifier: string,
+  allowed_ipds: Array<string>,
+  app_launcher_visible: boolean,
+  auto_redirect_to_identity: boolean,
+  cors_headers: {
+    allow_all_headers: boolean,
+    allow_all_methods: boolean,
+    allow_all_origins: boolean,
+    allow_credentials: boolean,
+    allowed_headers: Array,
+    allowed_methods: Array<string>,
+    allowed_origins: Array,
+    max_age: number,
+  },
+  custom_deny_message: string,
+  custom_deny_url: string,
+  custom_non_identity_deny_url: string
+  custom_pages: Array<string>,
+  domain: string,
+  enable_binding_cookie: boolean,
+  http_only_cookie_attribute: boolean,
+  logo_url: string,
+  name: string,
+  path_cookie_attribute: boolean,
+  same_site_cookie_attribute: string,
+  self_hosted_domains: Array<string>,
+  service_auth_401_redirect: boolean,
+  session_duration: string,
+  skip_interstitial: boolean,
+  tags: Array<string>,
+  type: string,
+}
+
+export interface IPostAccountsByIdentifierAccessAppsResponse {
+  data: {
+    result: {
+      aud: string,
+      created_at: string,
+      id: string,
+      updated_at: string,
+      allowed_ipds: Array<string>,
+      app_launcher_visible: boolean,
+      auto_redirect_to_identity: boolean,
+      cors_headers: {
+        allow_all_headers: boolean,
+        allow_all_methods: boolean,
+        allow_all_origins: boolean,
+        allow_credentials: boolean,
+        allowed_headers: Array,
+        allowed_methods: Array<string>,
+        allowed_origins: Array,
+        max_age: number,
+      },
+      custom_deny_message: string,
+      custom_deny_url: string,
+      custom_non_identity_deny_url: string
+      custom_pages: Array<string>,
+      domain: string,
+      enable_binding_cookie: boolean,
+      http_only_cookie_attribute: boolean,
+      logo_url: string,
+      name: string,
+      path_cookie_attribute: boolean,
+      same_site_cookie_attribute: string,
+      self_hosted_domains: Array<string>,
+      service_auth_401_redirect: boolean,
+      session_duration: string,
+      skip_interstitial: boolean,
+      tags: Array<string>,
+      type: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByAppIdParams {
+  app_id: string,
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByAppIdResponse {
+  data: {
+    result: {
+      aud: string,
+      created_at: string,
+      id: string,
+      updated_at: string,
+      allowed_ipds: Array<string>,
+      app_launcher_visible: boolean,
+      auto_redirect_to_identity: boolean,
+      cors_headers: {
+        allow_all_headers: boolean,
+        allow_all_methods: boolean,
+        allow_all_origins: boolean,
+        allow_credentials: boolean,
+        allowed_headers: Array,
+        allowed_methods: Array<string>,
+        allowed_origins: Array,
+        max_age: number,
+      },
+      custom_deny_message: string,
+      custom_deny_url: string,
+      custom_non_identity_deny_url: string
+      custom_pages: Array<string>,
+      domain: string,
+      enable_binding_cookie: boolean,
+      http_only_cookie_attribute: boolean,
+      logo_url: string,
+      name: string,
+      path_cookie_attribute: boolean,
+      same_site_cookie_attribute: string,
+      self_hosted_domains: Array<string>,
+      service_auth_401_redirect: boolean,
+      session_duration: string,
+      skip_interstitial: boolean,
+      tags: Array<string>,
+      type: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessAppsByAppIdParams {
+  app_id: string,
+  identifier: string,
+}
+
+export interface IPutAccountsByIdentifierAccessAppsByAppIdResponse {
+  data: {
+    result: {
+      aud: string,
+      created_at: string,
+      id: string,
+      updated_at: string,
+      allowed_ipds: Array<string>,
+      app_launcher_visible: boolean,
+      auto_redirect_to_identity: boolean,
+      cors_headers: {
+        allow_all_headers: boolean,
+        allow_all_methods: boolean,
+        allow_all_origins: boolean,
+        allow_credentials: boolean,
+        allowed_headers: Array,
+        allowed_methods: Array<string>,
+        allowed_origins: Array,
+        max_age: number,
+      },
+      custom_deny_message: string,
+      custom_deny_url: string,
+      custom_non_identity_deny_url: string
+      custom_pages: Array<string>,
+      domain: string,
+      enable_binding_cookie: boolean,
+      http_only_cookie_attribute: boolean,
+      logo_url: string,
+      name: string,
+      path_cookie_attribute: boolean,
+      same_site_cookie_attribute: string,
+      self_hosted_domains: Array<string>,
+      service_auth_401_redirect: boolean,
+      session_duration: string,
+      skip_interstitial: boolean,
+      tags: Array<string>,
+      type: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensParams {
+  app_id: string,
+  identifier: string,
+}
+
+export interface IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensResolve {
+  data: {
+    result: object,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksParams {
+  app_id: string,
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksResolve {
+  data: {
+    result: {
+      app_state: object,
+      user_identity: object,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessLogsAccessRequestParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessLogsAccessRequestResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessCustomPagesParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessCustomPagesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessCustomPagesParams {
+  identifier: string,
+  app_count?: number,
+  custom_html: string,
+  name: string,
+  type: string,
+}
+
+export interface IPostAccountsByIdentifierAccessCustomPagesResponse {
+  data: {
+    result: {
+      app_count: number,
+      created_at: string,
+      type: string,
+      uid: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessCustomPagesByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessCustomPagesByUuidResponse {
+  data: {
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    result: {
+      id: string,
+    },
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessCustomPagesByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IGetAccountsByIdentifierAccessCustomPagesByUuidResponse {
+  data: {
+    result: {
+      app_count?: number,
+      created_at?: string,
+      custom_html: string,
+      name: string,
+      type: string,
+      uid?: string,
+      updated_at?: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessCustomPagesByUuidParams {
+  identifier: string,
+  uuid: string,
+  app_count?: number,
+  custom_html: string,
+  name: string,
+  type: string,
+}
+
+export interface IPutAccountsByIdentifierAccessCustomPagesByUuidResponse {
+  data: {
+    result: {
+      app_count?: number,
+      created_at?: string,
+      custom_html: string,
+      name: string,
+      type: string,
+      uid?: string,
+      updated_at?: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
   }
 }
