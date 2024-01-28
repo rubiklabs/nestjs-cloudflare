@@ -1561,3 +1561,665 @@ export interface IPutAccountsByIdentifierAccessCustomPagesByUuidResponse {
     success: boolean,
   }
 }
+export interface IGetAccountsByIdentifierAccessGroupsParams {
+  identifier: string,
+
+}
+
+export interface IGetAccountsByIdentifierAccessGroupsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessGroupsParams {
+  identifier: string,
+  // Buraya bak. https://developers.cloudflare.com/api/operations/access-groups-create-an-access-group
+}
+
+export interface IPutAccountsByIdentifierAccessGroupsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessGroupsByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessGroupsByUuidResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessGroupsByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+// Buraya bak 2. Aynısı.
+export interface IGetAccountsByIdentifierAccessGroupsByUuidResponse {
+  data: {
+    result: {
+
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessGroupsByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+// Buraya bak 3. Aynısı.
+export interface IPutAccountsByIdentifierAccessGroupsByUuidResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessIdentityProvidersParams {
+  identifier: string,
+}
+export interface IGetAccountsByIdentifierAccessIdentityProvidersResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+// Buraya dikkat 4. https://developers.cloudflare.com/api/operations/access-identity-providers-add-an-access-identity-provider
+export interface IPostAccountsByIdentifierAccessIdentityProvidersParams {
+  identifier: string,
+}
+export interface IPostAccountsByIdentifierAccessIdentityProvidersResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+export interface IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+
+  }
+}
+
+// Buraya dikkat 5.
+export interface IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+export interface IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+
+  }
+}
+
+// Buraya dikkat 6.
+export interface IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+export interface IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessKeysParams {
+  identifier: string,
+}
+export interface IGetAccountsByIdentifierAccessKeysResponse {
+  data: {
+    days_until_next_rotation: number,
+    key_rotation_interval_days: number,
+    last_key_rotation_at: string,
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessKeysParams {
+  identifier: string,
+  key_rotation_interval_days?: number,
+}
+export interface IPutAccountsByIdentifierAccessKeysResponse {
+  data: {
+    days_until_next_rotation: number,
+    key_rotation_interval_days: number,
+    last_key_rotation_at: string,
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+
+export interface IPostAccountsByIdentifierAccessKeysRotateParams {
+  identifier: string,
+}
+export interface IPostAccountsByIdentifierAccessKeysRotateResponse {
+  data: {
+    days_until_next_rotation: number,
+    key_rotation_interval_days: number,
+    last_key_rotation_at: string,
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessCertificatesParams {
+  identifier: string,
+}
+export interface IGetAccountsByIdentifierAccessCertificatesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessCertificatesParams {
+  identifier: string,
+  associated_hostnames?: Array<string>, 
+  certificate: string, 
+  name: string,
+}
+export interface IPostAccountsByIdentifierAccessCertificatesResponse {
+  data: {
+    result: {
+      associated_hostnames: Array<string>,
+      created_at: string,
+      expires_on: string,
+      fingerprint: string,
+      id: string,
+      name: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessCertificatesSettingsParams {
+  identifier: string,
+  settings: Array<{
+    china__network: number,
+    client_certificate_forwarding: number,
+    hostname: string,
+  }>
+}
+
+export interface IGetAccountsByIdentifierAccessCertificatesSettingsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
+  identifier: string,
+  uuid:string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse {
+  data: {
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    result: {
+      id: string,
+    },
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
+  identifier: string,
+  uuid:string,
+}
+
+export interface IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse {
+  data: {
+    result: {
+      associated_hostnames: Array<string>,
+      created_at: string,
+      expires_on: string,
+      fingerprint: string,
+      id: string,
+      name: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
+  identifier: string,
+  uuid:string,
+  associated_hostnames: Array<string>,
+  name?: string,
+}
+
+export interface IPutAccountsByIdentifierAccessCertificatesSettingsByUuidResponse {
+  data: {
+    result: {
+      associated_hostnames: Array<string>,
+      created_at: string,
+      expires_on: string,
+      fingerprint: string,
+      id: string,
+      name: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams {
+  identifier: string,
+  uuid: string,
+  uuid1: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams {
+  identifier: string,
+  uuid: string,
+  uuid1: string,
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse {
+  data: {
+    result: {
+      approval_groups: Array<{
+        approval_needed: number,
+        email_addresses: Array,
+        email_list_uuid: string,
+      }>,
+      approval_required: boolean,
+      created_at: string,
+      decision: string,
+      exclude: Array<any>,
+      isolation_required: boolean,
+      name: string,
+      precedence: number,
+      purpose_justification_prompt: string,
+      purpose_justification_required: boolean,
+      require: Array<any>,
+      session_duration: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams {
+  identifier: string,
+  uuid: string,
+  uuid1: string,
+  approval_groups: Array<{
+    approval_needed: number,
+    email_addresses?: Array,
+    email_list_uuid?: string,
+  }>,
+  approval_required?: boolean,
+  decision: string,
+  exclude: Array<any>,
+  isolation_required?: boolean,
+  name: string,
+  precedence?: number,
+  purpose_justification_prompt?: string,
+  purpose_justification_required?: boolean,
+  require?: Array<any>,
+  session_duration?: string,
+}
+
+export interface IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse {
+  data: {
+    result: {
+      approval_groups: Array<{
+        approval_needed: number,
+        email_addresses: Array,
+        email_list_uuid: string,
+      }>,
+      approval_required: boolean,
+      created_at: string,
+      decision: string,
+      exclude: Array<any>,
+      id: string,
+      include: Array<string>,
+      isolation_required: boolean,
+      name: string,
+      precedence: number,
+      purpose_justification_prompt: string,
+      purpose_justification_required: boolean,
+      require: Array<any>,
+      session_duration: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+
+export interface IGetAccountsByIdentifierAccessAppsByUuidPoliciesParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IGetAccountsByIdentifierAccessAppsByUuidPoliciesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessAppsByUuidPoliciesParams {
+  identifier: string,
+  uuid: string,
+  uuid1: string,
+  approval_groups: Array<{
+    approval_needed: number,
+    email_addresses?: Array,
+    email_list_uuid?: string,
+  }>,
+  approval_required?: boolean,
+  decision: string,
+  exclude: Array<any>,
+  include: Array<any>,
+  isolation_required?: boolean,
+  name: string,
+  precedence?: number,
+  purpose_justification_prompt?: string,
+  purpose_justification_required?: boolean,
+  require?: Array<any>,
+  session_duration?: string,
+}
+
+export interface IPostAccountsByIdentifierAccessAppsByUuidPoliciesResponse {
+  data: {
+    result: {
+      approval_groups: Array<{
+        approval_needed: number,
+        email_addresses: Array,
+        email_list_uuid: string,
+      }>,
+      approval_required: boolean,
+      created_at: string,
+      decision: string,
+      exclude: Array<any>,
+      id: string,
+      include: Array<string>,
+      isolation_required: boolean,
+      name: string,
+      precedence: number,
+      purpose_justification_prompt: string,
+      purpose_justification_required: boolean,
+      require: Array<any>,
+      session_duration: string,
+      updated_at: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}

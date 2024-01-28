@@ -1,7 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { CloudflareModuleOptions, MODULE_OPTIONS_TOKEN } from "../utils";
 import { HttpService } from "@nestjs/axios";
-import { IDeleteAccountsByIdentifierAccessBookmarksUuidParams, IDeleteAccountsByIdentifierAccessBookmarksUuidResponse, IDeleteAccountsByIdentifierAccessCustomPagesByUuidParams, IDeleteAccountsByIdentifierAccessCustomPagesByUuidResponse, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdParams, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierParams, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnParams, IGetAccountsByAccountIdentifierIntelAsnByAsnResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsParams, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsResponse, IGetAccountsByIdentifierAccessAppsByAppIdParams, IGetAccountsByIdentifierAccessAppsByAppIdResponse, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksParams, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksResolve, IGetAccountsByIdentifierAccessAppsParams, IGetAccountsByIdentifierAccessAppsResponse, IGetAccountsByIdentifierAccessBookmarksParams, IGetAccountsByIdentifierAccessBookmarksResponse, IGetAccountsByIdentifierAccessBookmarksUuidParams, IGetAccountsByIdentifierAccessBookmarksUuidResponse, IGetAccountsByIdentifierAccessCustomPagesParams, IGetAccountsByIdentifierAccessCustomPagesResponse, IGetAccountsByIdentifierAccessLogsAccessRequestParams, IGetAccountsByIdentifierAccessLogsAccessRequestResponse, IGetZonesByZoneIdApiGatewayConfigurationParams, IGetZonesByZoneIdApiGatewayConfigurationResponse, IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams, IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse, IGetZonesByZoneIdApiGatewayDiscoveryParams, IGetZonesByZoneIdApiGatewayDiscoveryResponse, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IGetZonesByZoneIdApiGatewayOperationsOperationsIdParams, IGetZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IGetZonesByZoneIdApiGatewayOperationsParams, IGetZonesByZoneIdApiGatewayOperationsResponse, IGetZonesByZoneIdApiGatewaySchemasParams, IGetZonesByZoneIdApiGatewaySchemasResponse, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IGetZonesByZoneIdApiGatewayUserSchemasParams, IGetZonesByZoneIdApiGatewayUserSchemasResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse, IGetZonesByZoneIdentifierClientCertificatesIdentifierParams, IGetZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetZonesByZoneIdentifierClientCertificatesParams, IGetZonesByZoneIdentifierClientCertificatesResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IPatchZonesByZoneIdentifierClientCertificatesIdentifierParams, IPatchZonesByZoneIdentifierClientCertificatesIdentifierResponse, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensParams, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensResolve, IPostAccountsByIdentifierAccessAppsParams, IPostAccountsByIdentifierAccessAppsResponse, IPostAccountsByIdentifierAccessBookmarksUuidParams, IPostAccountsByIdentifierAccessBookmarksUuidResponse, IPostAccountsByIdentifierAccessCustomPagesParams, IPostAccountsByIdentifierAccessCustomPagesResponse, IPostZonesByZoneIdApiGatewayOperationsParams, IPostZonesByZoneIdApiGatewayOperationsResponse, IPostZonesByZoneIdApiGatewayUserSchemasParams, IPostZonesByZoneIdApiGatewayUserSchemasResponse, IPostZonesByZoneIdentifierClientCertificatesParams, IPostZonesByZoneIdentifierClientCertificatesResponse, IPutAccountsByIdentifierAccessAppsByAppIdParams, IPutAccountsByIdentifierAccessAppsByAppIdResponse, IPutAccountsByIdentifierAccessBookmarksUuidParams, IPutAccountsByIdentifierAccessBookmarksUuidResponse, IPutZonesByZoneIdApiGatewayConfigurationParams, IPutZonesByZoneIdApiGatewayConfigurationResponse, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse } from "./index.d"
+import { IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IDeleteAccountsByIdentifierAccessBookmarksUuidParams, IDeleteAccountsByIdentifierAccessBookmarksUuidResponse, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IDeleteAccountsByIdentifierAccessCustomPagesByUuidParams, IDeleteAccountsByIdentifierAccessCustomPagesByUuidResponse, IDeleteAccountsByIdentifierAccessGroupsByUuidParams, IDeleteAccountsByIdentifierAccessGroupsByUuidResponse, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidParams, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdParams, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierParams, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnParams, IGetAccountsByAccountIdentifierIntelAsnByAsnResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsParams, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsResponse, IGetAccountsByIdentifierAccessAppsByAppIdParams, IGetAccountsByIdentifierAccessAppsByAppIdResponse, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksParams, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksResolve, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IGetAccountsByIdentifierAccessAppsParams, IGetAccountsByIdentifierAccessAppsResponse, IGetAccountsByIdentifierAccessBookmarksParams, IGetAccountsByIdentifierAccessBookmarksResponse, IGetAccountsByIdentifierAccessBookmarksUuidParams, IGetAccountsByIdentifierAccessBookmarksUuidResponse, IGetAccountsByIdentifierAccessCertificatesParams, IGetAccountsByIdentifierAccessCertificatesResponse, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IGetAccountsByIdentifierAccessCertificatesSettingsParams, IGetAccountsByIdentifierAccessCertificatesSettingsResponse, IGetAccountsByIdentifierAccessCustomPagesByUuidParams, IGetAccountsByIdentifierAccessCustomPagesByUuidResponse, IGetAccountsByIdentifierAccessCustomPagesParams, IGetAccountsByIdentifierAccessCustomPagesResponse, IGetAccountsByIdentifierAccessGroupsByUuidParams, IGetAccountsByIdentifierAccessGroupsByUuidResponse, IGetAccountsByIdentifierAccessGroupsParams, IGetAccountsByIdentifierAccessGroupsResponse, IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams, IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IGetAccountsByIdentifierAccessIdentityProvidersParams, IGetAccountsByIdentifierAccessIdentityProvidersResponse, IGetAccountsByIdentifierAccessKeysParams, IGetAccountsByIdentifierAccessKeysResponse, IGetAccountsByIdentifierAccessLogsAccessRequestParams, IGetAccountsByIdentifierAccessLogsAccessRequestResponse, IGetZonesByZoneIdApiGatewayConfigurationParams, IGetZonesByZoneIdApiGatewayConfigurationResponse, IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams, IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse, IGetZonesByZoneIdApiGatewayDiscoveryParams, IGetZonesByZoneIdApiGatewayDiscoveryResponse, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IGetZonesByZoneIdApiGatewayOperationsOperationsIdParams, IGetZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IGetZonesByZoneIdApiGatewayOperationsParams, IGetZonesByZoneIdApiGatewayOperationsResponse, IGetZonesByZoneIdApiGatewaySchemasParams, IGetZonesByZoneIdApiGatewaySchemasResponse, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IGetZonesByZoneIdApiGatewayUserSchemasParams, IGetZonesByZoneIdApiGatewayUserSchemasResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse, IGetZonesByZoneIdentifierClientCertificatesIdentifierParams, IGetZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetZonesByZoneIdentifierClientCertificatesParams, IGetZonesByZoneIdentifierClientCertificatesResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IPatchZonesByZoneIdentifierClientCertificatesIdentifierParams, IPatchZonesByZoneIdentifierClientCertificatesIdentifierResponse, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensParams, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensResolve, IPostAccountsByIdentifierAccessAppsParams, IPostAccountsByIdentifierAccessAppsResponse, IPostAccountsByIdentifierAccessBookmarksUuidParams, IPostAccountsByIdentifierAccessBookmarksUuidResponse, IPostAccountsByIdentifierAccessCertificatesParams, IPostAccountsByIdentifierAccessCertificatesResponse, IPostAccountsByIdentifierAccessCustomPagesParams, IPostAccountsByIdentifierAccessCustomPagesResponse, IPostAccountsByIdentifierAccessIdentityProvidersParams, IPostAccountsByIdentifierAccessIdentityProvidersResponse, IPostAccountsByIdentifierAccessKeysRotateParams, IPostAccountsByIdentifierAccessKeysRotateResponse, IPostZonesByZoneIdApiGatewayOperationsParams, IPostZonesByZoneIdApiGatewayOperationsResponse, IPostZonesByZoneIdApiGatewayUserSchemasParams, IPostZonesByZoneIdApiGatewayUserSchemasResponse, IPostZonesByZoneIdentifierClientCertificatesParams, IPostZonesByZoneIdentifierClientCertificatesResponse, IPutAccountsByIdentifierAccessAppsByAppIdParams, IPutAccountsByIdentifierAccessAppsByAppIdResponse, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IPutAccountsByIdentifierAccessBookmarksUuidParams, IPutAccountsByIdentifierAccessBookmarksUuidResponse, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IPutAccountsByIdentifierAccessCustomPagesByUuidParams, IPutAccountsByIdentifierAccessCustomPagesByUuidResponse, IPutAccountsByIdentifierAccessGroupsByUuidParams, IPutAccountsByIdentifierAccessGroupsByUuidResponse, IPutAccountsByIdentifierAccessGroupsParams, IPutAccountsByIdentifierAccessGroupsResponse, IPutAccountsByIdentifierAccessKeysParams, IPutAccountsByIdentifierAccessKeysResponse, IPutZonesByZoneIdApiGatewayConfigurationParams, IPutZonesByZoneIdApiGatewayConfigurationResponse, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse } from "./index.d"
 
 @Injectable()
 export class CloudflareService {
@@ -850,24 +850,451 @@ export class CloudflareService {
     };
   }
 
+  getAccountsByIdentifierAccessGroups = async ({ identifier }: IGetAccountsByIdentifierAccessGroupsParams): Promise<IGetAccountsByIdentifierAccessGroupsResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/groups`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
 
+  // Buraya bak. https://developers.cloudflare.com/api/operations/access-groups-create-an-access-group
+  putAccountsByIdentifierAccessGroups = async ({ identifier }: IPutAccountsByIdentifierAccessGroupsParams): Promise<IPutAccountsByIdentifierAccessGroupsResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/groups`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  deleteAccountsByIdentifierAccessGroupsByUuid = async ({ identifier, uuid }: IDeleteAccountsByIdentifierAccessGroupsByUuidParams): Promise<IDeleteAccountsByIdentifierAccessGroupsByUuidResponse> => {
+    this.httpService.delete(this.url + `/accounts/${identifier}/access/groups/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+  // Buraya bak 2.
+  getAccountsByIdentifierAccessGroupsByUuid = async ({ identifier, uuid }: IGetAccountsByIdentifierAccessGroupsByUuidParams): Promise<IGetAccountsByIdentifierAccessGroupsByUuidResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/groups/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+  // Buraya bak 3.
+  putAccountsByIdentifierAccessGroupsByUuid = async ({ identifier, uuid }: IPutAccountsByIdentifierAccessGroupsByUuidParams): Promise<IPutAccountsByIdentifierAccessGroupsByUuidResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/groups/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByIdentifierAccessIdentityProviders = async ({ identifier }: IGetAccountsByIdentifierAccessIdentityProvidersParams): Promise<IGetAccountsByIdentifierAccessIdentityProvidersResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/identity_providers`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  // Buraya dikkat 4. https://developers.cloudflare.com/api/operations/access-identity-providers-add-an-access-identity-provider
 
+  postAccountsByIdentifierAccessIdentityProviders = async ({ identifier }: IPostAccountsByIdentifierAccessIdentityProvidersParams): Promise<IPostAccountsByIdentifierAccessIdentityProvidersResponse> => {
+    this.httpService.post(this.url + `/accounts/${identifier}/access/identity_providers`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  deleteAccountsByIdentifierAccessIdentityProvidersByUuid = async ({ identifier, uuid }: IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidParams): Promise<IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidResponse> => {
+    this.httpService.delete(this.url + `/accounts/${identifier}/access/identity_providers/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  // Buraya dikkat 5.
+  getAccountsByIdentifierAccessIdentityProvidersByUuid = async ({ identifier, uuid }: IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams): Promise<IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/identity_providers/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  // Buraya dikkat 6.
+  putAccountsByIdentifierAccessIdentityProvidersByUuid = async ({ identifier, uuid }: IPutAccountsByIdentifierAccessIdentityProvidersByUuidParams): Promise<IPutAccountsByIdentifierAccessIdentityProvidersByUuidResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/identity_providers/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByIdentifierAccessKeys = async ({ identifier }: IGetAccountsByIdentifierAccessKeysParams): Promise<IGetAccountsByIdentifierAccessKeysResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/keys`)
+    return {
+      data: {
+        days_until_next_rotation: 1,
+        key_rotation_interval_days: 30,
+        last_key_rotation_at: "",
+        errors: [],
+        messages: [],
+        result: {},
+        success: true,
+      }
+    };
+  }
 
+  putAccountsByIdentifierAccessKeys = async ({ identifier, key_rotation_interval_days }: IPutAccountsByIdentifierAccessKeysParams): Promise<IPutAccountsByIdentifierAccessKeysResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/keys`)
+    return {
+      data: {
+        days_until_next_rotation: 1,
+        key_rotation_interval_days: 30,
+        last_key_rotation_at: "",
+        errors: [],
+        messages: [],
+        result: {},
+        success: true,
+      }
+    };
+  }
 
+  postAccountsByIdentifierAccessKeysRotate = async ({ identifier }: IPostAccountsByIdentifierAccessKeysRotateParams): Promise<IPostAccountsByIdentifierAccessKeysRotateResponse> => {
+    this.httpService.post(this.url + `/accounts/${identifier}/access/keys/rotate`)
+    return {
+      data: {
+        days_until_next_rotation: 1,
+        key_rotation_interval_days: 30,
+        last_key_rotation_at: "",
+        errors: [],
+        messages: [],
+        result: {},
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByIdentifierAccessCertificates = async ({ identifier }: IGetAccountsByIdentifierAccessCertificatesParams): Promise<IGetAccountsByIdentifierAccessCertificatesResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/certificates`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  postAccountsByIdentifierAccessCertificates = async ({ identifier, associated_hostnames, certificate, name }: IPostAccountsByIdentifierAccessCertificatesParams): Promise<IPostAccountsByIdentifierAccessCertificatesResponse> => {
+    this.httpService.post(this.url + `/accounts/${identifier}/access/certificates`)
+    return {
+      data: {
+        result: {
+          associated_hostnames: [],
+          created_at: "",
+          expires_on: "",
+          fingerprint: "",
+          id: "",
+          name: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByIdentifierAccessCertificatesSettings = async ({ identifier }: IGetAccountsByIdentifierAccessCertificatesSettingsParams): Promise<IGetAccountsByIdentifierAccessCertificatesSettingsResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/certificates/settings`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  deleteAccountsByIdentifierAccessCertificatesSettingsByUuid = async ({ identifier, uuid }: IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams): Promise<IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse> => {
+    this.httpService.delete(this.url + `/accounts/${identifier}/access/certificates/settings/${uuid}`)
+    return {
+      data: {
+        errors: [],
+        messages: [],
+        result: {
+          id:"",
+        },
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByIdentifierAccessCertificatesSettingsByUuid = async ({ identifier, uuid }: IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams): Promise<IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/certificates/settings/${uuid}`)
+    return {
+      data: {
+        result: {
+          associated_hostnames: [],
+          created_at: "",
+          expires_on: "",
+          fingerprint: "",
+          id: "",
+          name: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  putAccountsByIdentifierAccessCertificatesSettingsByUuid = async ({ identifier, uuid, associated_hostnames, name }: IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams): Promise<IPutAccountsByIdentifierAccessCertificatesSettingsByUuidResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/certificates/settings/${uuid}`)
+    return {
+      data: {
+        result: {
+          associated_hostnames: [],
+          created_at: "",
+          expires_on: "",
+          fingerprint: "",
+          id: "",
+          name: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  deleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuid = async ({ identifier, uuid1, uuid }: IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams): Promise<IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse> => {
+    this.httpService.delete(this.url + `/accounts/${identifier}/access/apps/${uuid1}/policies/${uuid}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByIdentifierAccessAppsByUuid1PoliciesByUuid = async ({ identifier, uuid1, uuid }: IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams): Promise<IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/apps/${uuid1}/policies/${uuid}`)
+    return {
+      data: {
+        result: {
+          approval_groups: [{
+            approval_needed: 1,
+            email_addresses: [],
+            email_list_uuid: "",
+          }],
+          approval_required: false,
+          created_at: "",
+          decision: "",
+          exclude: [],
+          isolation_required: false,
+          name: "",
+          precedence: 1,
+          purpose_justification_prompt: "",
+          purpose_justification_required: false,
+          require: [],
+          session_duration: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  putAccountsByIdentifierAccessAppsByUuid1PoliciesByUuid = async ({ identifier, uuid1, uuid, approval_groups, approval_required, decision, exclude, isolation_required, name, precedence, purpose_justification_prompt, purpose_justification_required, require,  session_duration
+  }: IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams): Promise<IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse> => {
+    this.httpService.put(this.url + `/accounts/${identifier}/access/apps/${uuid1}/policies/${uuid}`)
+    return {
+      data: {
+        result: {
+          approval_groups: [{
+            approval_needed: 1,
+            email_addresses: [],
+            email_list_uuid: "",
+          }],
+          approval_required: false,
+          created_at: "",
+          decision: "",
+          exclude: [],
+          id: "",
+          include: [],
+          isolation_required: false,
+          name: "",
+          precedence: 1,
+          purpose_justification_prompt: "",
+          purpose_justification_required: false,
+          require: [],
+          session_duration: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByIdentifierAccessAppsByUuidPolicies = async ({ identifier, uuid  }: IGetAccountsByIdentifierAccessAppsByUuidPoliciesParams): Promise<IGetAccountsByIdentifierAccessAppsByUuidPoliciesResponse> => {
+    this.httpService.get(this.url + `/accounts/${identifier}/access/apps/${uuid}/policies`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
+
+  postAccountsByIdentifierAccessAppsByUuidPolicies = async ({ identifier, uuid1, uuid, approval_groups, approval_required, decision, exclude, include, isolation_required, name, precedence, purpose_justification_prompt, purpose_justification_required, require,  session_duration  }: IPostAccountsByIdentifierAccessAppsByUuidPoliciesParams): Promise<IPostAccountsByIdentifierAccessAppsByUuidPoliciesResponse> => {
+    this.httpService.post(this.url + `/accounts/${identifier}/access/apps/${uuid}/policies`)
+    return {
+      data: {
+        result: {
+          approval_groups: [{
+            approval_needed: 1,
+            email_addresses: [],
+            email_list_uuid: "",
+          }],
+          approval_required: false,
+          created_at: "",
+          decision: "",
+          exclude: [],
+          id: "",
+          include: [],
+          isolation_required: false,
+          name: "",
+          precedence: 1,
+          purpose_justification_prompt: "",
+          purpose_justification_required: false,
+          require: [],
+          session_duration: "",
+          updated_at: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  //Access Service Tokens Start
 
 
 
