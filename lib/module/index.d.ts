@@ -2223,3 +2223,401 @@ export interface IPostAccountsByIdentifierAccessAppsByUuidPoliciesResponse {
     success: boolean,
   }
 }
+
+export interface IGetAccountsByIdentifierAccessServiceTokensParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessServiceTokensResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensParams {
+  identifier: string,
+  duration?: string,
+  name: string,
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensResponse {
+  data: {
+    result: {
+      client_id: string,
+      client_secret: string,
+      created_at: string, //date
+      duration: string,
+      id: string,
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessServiceTokensByUuidParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessServiceTokensByUuidResponse {
+  data: {
+    result: {
+      client_id: string,
+      created_at: string, //date
+      duration: string,
+      id: string,
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessServiceTokensByUuidParams {
+  identifier: string,
+  uuid: string,
+  duration: string,
+  name: string,
+}
+
+export interface IPutAccountsByIdentifierAccessServiceTokensByUuidResponse {
+  data: {
+    result: {
+      client_id: string,
+      created_at: string, //date
+      duration: string,
+      id: string,
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshParams {
+  identifier: string,
+  uuid: string,
+  duration: string,
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshResponse {
+  data: {
+    result: {
+      client_id: string,
+      created_at: string, //date
+      duration: string,
+      id: string,
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensByUuidRotateParams {
+  identifier: string,
+  uuid: string,
+  duration: string,
+}
+
+export interface IPostAccountsByIdentifierAccessServiceTokensByUuidRotateResponse {
+  data: {
+    result: {
+      client_id: string,
+      client_secret: string,
+      created_at: string, //date
+      duration: string,
+      id: string,
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessApssCaParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessApssCaResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessApssByUuidCaParams {
+  identifier: string,
+  uuid: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessApssByUuidCaResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessApssByUuidCaParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessApssByUuidCaResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByIdentifierAccessApssByUuidCaParams {
+  identifier: string,
+}
+
+export interface IPostAccountsByIdentifierAccessApssByUuidCaResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessTagsParams {
+  identifier: string,
+}
+
+export interface IGetAccountsByIdentifierAccessTagsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+export interface IPostAccountsByIdentifierAccessTagsParams {
+  identifier: string,
+  name: string,
+}
+
+export interface IPostAccountsByIdentifierAccessTagsResponse {
+  data: {
+    result: {
+      app_count: number,
+      created_at: string, //date
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByIdentifierAccessTagsByNameParams {
+  identifier: string,
+  name: string,
+}
+
+export interface IDeleteAccountsByIdentifierAccessTagsByNameResponse {
+  data: {
+    result: {
+      name: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IGetAccountsByIdentifierAccessTagsByNameParams {
+  identifier: string,
+  name: string,
+}
+
+export interface IGetAccountsByIdentifierAccessTagsByNameResponse {
+  data: {
+    result: {
+      app_count: number,
+      created_at: string, //date
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByIdentifierAccessTagsByNameParams {
+  identifier: string,
+  name: string,
+}
+
+export interface IPutAccountsByIdentifierAccessTagsByNameResponse {
+  data: {
+    result: {
+      app_count: number,
+      created_at: string, //date
+      name: string,
+      updated_at: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierBillingProfileParams {
+  account_identifier: any, // bu yazmıyor. 
+}
+
+export interface IGetAccountsByAccountIdentifierBillingProfileResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
