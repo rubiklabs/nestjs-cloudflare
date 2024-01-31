@@ -1885,8 +1885,8 @@ export interface IGetAccountsByIdentifierAccessCertificatesResponse {
 
 export interface IPostAccountsByIdentifierAccessCertificatesParams {
   identifier: string,
-  associated_hostnames?: Array<string>, 
-  certificate: string, 
+  associated_hostnames?: Array<string>,
+  certificate: string,
   name: string,
 }
 export interface IPostAccountsByIdentifierAccessCertificatesResponse {
@@ -1944,7 +1944,7 @@ export interface IGetAccountsByIdentifierAccessCertificatesSettingsResponse {
 
 export interface IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
   identifier: string,
-  uuid:string,
+  uuid: string,
 }
 
 export interface IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse {
@@ -1966,7 +1966,7 @@ export interface IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResp
 
 export interface IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
   identifier: string,
-  uuid:string,
+  uuid: string,
 }
 
 export interface IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse {
@@ -1994,7 +1994,7 @@ export interface IGetAccountsByIdentifierAccessCertificatesSettingsByUuidRespons
 
 export interface IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams {
   identifier: string,
-  uuid:string,
+  uuid: string,
   associated_hostnames: Array<string>,
   name?: string,
 }
@@ -2604,7 +2604,7 @@ export interface IPutAccountsByIdentifierAccessTagsByNameResponse {
 }
 
 export interface IGetAccountsByAccountIdentifierBillingProfileParams {
-  account_identifier: any, // bu yazmıyor. 
+  account_identifier: string,
 }
 
 export interface IGetAccountsByAccountIdentifierBillingProfileResponse {
@@ -2619,5 +2619,872 @@ export interface IGetAccountsByAccountIdentifierBillingProfileResponse {
       message: string,
     }>,
     success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsParams {
+  account_identifier: string,
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersMonitorsParams {
+  account_identifier?: string,
+  allow_insecure?: boolean,
+  consecutive_down?: number,
+  consecutive_up?: number,
+  description?: string,
+  expected_body?: string,
+  expected_codes: string,
+  follow_redirects?: boolean,
+  header?: object,
+  interval?: number,
+  method?: string,
+  path?: string,
+  port?: number,
+  probe_zone?: string,
+  retries?: number,
+  timeout?: number,
+  type?: string,
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersMonitorsResponse {
+  data: {
+    result: {
+      allow_insecure: boolean,
+      consecutive_down: number,
+      consecutive_up: number,
+      description: string,
+      expected_body: string,
+      expected_codes: string,
+      follow_redirects: boolean,
+      header: object,
+      interval: number,
+      method: string,
+      path: string,
+      port: number,
+      probe_zone: string,
+      retries: number,
+      timeout: number,
+      type: string,
+      created_on: string, //date
+      id: string,
+      modified_on: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+  
+}
+
+export interface IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse {
+  data: {
+    result: {
+      allow_insecure: boolean,
+      consecutive_down: number,
+      consecutive_up: number,
+      description: string,
+      expected_body: string,
+      expected_codes: string,
+      follow_redirects: boolean,
+      header: object,
+      interval: number,
+      method: string,
+      path: string,
+      port: number,
+      probe_zone: string,
+      retries: number,
+      timeout: number,
+      type: string,
+      created_on: string, //date
+      id: string,
+      modified_on: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+  allow_insecure?: boolean,
+  consecutive_down?: number,
+  consecutive_up?: number,
+  description?: string,
+  expected_body?: string,
+  expected_codes: string,
+  follow_redirects?: boolean,
+  header?: object,
+  interval?: number,
+  method?: string,
+  path?: string,
+  port?: number,
+  probe_zone?: string,
+  retries?: number,
+  timeout?: number,
+  type?: string,
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse {
+  data: {
+    result: {
+      allow_insecure: boolean,
+      consecutive_down: number,
+      consecutive_up: number,
+      description: string,
+      expected_body: string,
+      expected_codes: string,
+      follow_redirects: boolean,
+      header: object,
+      interval: number,
+      method: string,
+      path: string,
+      port: number,
+      probe_zone: string,
+      retries: number,
+      timeout: number,
+      type: string,
+      created_on: string, //date
+      id: string,
+      modified_on: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+  allow_insecure?: boolean,
+  consecutive_down?: number,
+  consecutive_up?: number,
+  description?: string,
+  expected_body?: string,
+  expected_codes: string,
+  follow_redirects?: boolean,
+  header?: object,
+  interval?: number,
+  method?: string,
+  path?: string,
+  port?: number,
+  probe_zone?: string,
+  retries?: number,
+  timeout?: number,
+  type?: string,
+}
+
+export interface IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse {
+  data: {
+    result: {
+      allow_insecure: boolean,
+      consecutive_down: number,
+      consecutive_up: number,
+      description: string,
+      expected_body: string,
+      expected_codes: string,
+      follow_redirects: boolean,
+      header: object,
+      interval: number,
+      method: string,
+      path: string,
+      port: number,
+      probe_zone: string,
+      retries: number,
+      timeout: number,
+      type: string,
+      created_on: string, //date
+      id: string,
+      modified_on: string, //date
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewParams {
+  account_identifier: string,
+  identifier: string,  
+  allow_insecure?: boolean,
+  consecutive_down?: number,
+  consecutive_up?: number,
+  description?: string,
+  expected_body?: string,
+  expected_codes: string,
+  follow_redirects?: boolean,
+  header?: object,
+  interval?: number,
+  method?: string,
+  path?: string,
+  port?: number,
+  probe_zone?: string,
+  retries?: number,
+  timeout?: number,
+  type?: string,
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewResponse {
+  data: {
+    result: {
+      pools: object,
+      preview_id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesParams {
+  account_identifier: string,
+  identifier: string,  
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesParams {
+  account_identifier: string,
+  preview_id: string,  
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsParams {
+  account_identifier: string,
+  monitor?: string,  
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersPoolsParams {
+  account_identifier: string,
+  notification_email?: string,  
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersPoolsResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info?: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count: number,
+    }
+  }
+}
+
+export interface IPoolsAccountsByAccountIdentifierLoadBalancersPoolsParams {
+  account_identifier: string,
+  description?: string, 
+  enabled?: boolean, 
+  latitude?: number, 
+  load_shedding?: {
+    default_percent: number,
+    default_policy: string,
+    session_percent: number,
+    session_policy: string,
+  }, 
+  longitude?: number, 
+  minimum_origins?: number, 
+  monitor?: string, 
+  name: string, 
+  notification_email?: string, 
+  notification_filter?: {
+    origin: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+    pool: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+  }, 
+  origin_steering?: {
+    policy: string,
+  }, 
+  origins: Array<{
+    address: string,
+    enabled: boolean,
+    header: {
+      Host: Array<string>,
+    },
+    name: string,
+    virtual_network_id: string,
+    weight?: number,
+  }>, 
+}
+
+export interface IPoolsAccountsByAccountIdentifierLoadBalancersPoolsResponse {
+  data: {
+    result: {
+      check_regions: Array<string>,
+      created_on: string, // date
+      description: string,
+      disabled_at: string, //date
+      enabled: boolean,
+      id: string,
+      latitude: number,
+      load_shedding: {
+        default_percent: number,
+        default_policy: string,
+        session_percent: number,
+        session_policy: string,
+      },
+      longitude: number,
+      minimum_origins: number,
+      modified_on: string, //date
+      monitor: string,
+      name: string,
+      notification_email: string,
+      notification_filter: {
+        origin: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+        pool: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+      }, 
+      origin_steering: {
+        policy: string,
+      }, 
+      origins: Array<{
+        address: string,
+        disabled_at: string, //date
+        enabled: boolean,
+        header: {
+          Host: Array<string>,
+        },
+        name: string,
+        virtual_network_id: string,
+        weight?: number,
+      }>, 
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+}
+
+export interface IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse {
+  data: {
+    result: {
+      id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,  
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse {
+  data: {
+    result: {
+      check_regions: Array<string>,
+      created_on: string, // date
+      description: string,
+      disabled_at: string, //date
+      enabled: boolean,
+      id: string,
+      latitude: number,
+      load_shedding: {
+        default_percent: number,
+        default_policy: string,
+        session_percent: number,
+        session_policy: string,
+      },
+      longitude: number,
+      minimum_origins: number,
+      modified_on: string, //date
+      monitor: string,
+      name: string,
+      notification_email: string,
+      notification_filter: {
+        origin: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+        pool: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+      }, 
+      origin_steering: {
+        policy: string,
+      }, 
+      origins: Array<{
+        address: string,
+        disabled_at: string, //date
+        enabled: boolean,
+        header: {
+          Host: Array<string>,
+        },
+        name: string,
+        virtual_network_id: string,
+        weight?: number,
+      }>, 
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,
+  check_regions?: Array<string>,
+  description?: string, 
+  enabled?: boolean, 
+  latitude?: number, 
+  load_shedding?: {
+    default_percent: number,
+    default_policy: string,
+    session_percent: number,
+    session_policy: string,
+  }, 
+  longitude?: number, 
+  minimum_origins?: number, 
+  monitor?: string, 
+  name: string, 
+  notification_email?: string, 
+  notification_filter?: {
+    origin: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+    pool: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+  }, 
+  origin_steering?: {
+    policy: string,
+  }, 
+  origins: Array<{
+    address: string,
+    enabled: boolean,
+    header: {
+      Host: Array<string>,
+    },
+    name: string,
+    virtual_network_id: string,
+    weight?: number,
+  }>,   
+}
+
+export interface IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse {
+  data: {
+    result: {
+      check_regions: Array<string>,
+      created_on: string, // date
+      description: string,
+      disabled_at: string, //date
+      enabled: boolean,
+      id: string,
+      latitude: number,
+      load_shedding: {
+        default_percent: number,
+        default_policy: string,
+        session_percent: number,
+        session_policy: string,
+      },
+      longitude: number,
+      minimum_origins: number,
+      modified_on: string, //date
+      monitor: string,
+      name: string,
+      notification_email: string,
+      notification_filter: {
+        origin: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+        pool: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+      }, 
+      origin_steering: {
+        policy: string,
+      }, 
+      origins: Array<{
+        address: string,
+        disabled_at: string, //date
+        enabled: boolean,
+        header: {
+          Host: Array<string>,
+        },
+        name: string,
+        virtual_network_id: string,
+        weight?: number,
+      }>, 
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams {
+  account_identifier: string,
+  identifier: string,
+  check_regions?: Array<string>,
+  description?: string, 
+  enabled?: boolean, 
+  latitude?: number, 
+  load_shedding?: {
+    default_percent: number,
+    default_policy: string,
+    session_percent: number,
+    session_policy: string,
+  }, 
+  longitude?: number, 
+  minimum_origins?: number, 
+  monitor?: string, 
+  name: string, 
+  notification_email?: string, 
+  notification_filter?: {
+    origin: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+    pool: {
+      disabled: boolean,
+      healthy: boolean,
+    },
+  }, 
+  origin_steering?: {
+    policy: string,
+  }, 
+  origins: Array<{
+    address: string,
+    enabled: boolean,
+    header: {
+      Host: Array<string>,
+    },
+    name: string,
+    virtual_network_id: string,
+    weight?: number,
+  }>,   
+}
+
+export interface IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse {
+  data: {
+    result: {
+      check_regions: Array<string>,
+      created_on: string, // date
+      description: string,
+      disabled_at: string, //date
+      enabled: boolean,
+      id: string,
+      latitude: number,
+      load_shedding: {
+        default_percent: number,
+        default_policy: string,
+        session_percent: number,
+        session_policy: string,
+      },
+      longitude: number,
+      minimum_origins: number,
+      modified_on: string, //date
+      monitor: string,
+      name: string,
+      notification_email: string,
+      notification_filter: {
+        origin: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+        pool: {
+          disabled: boolean,
+          healthy: boolean,
+        },
+      }, 
+      origin_steering: {
+        policy: string,
+      }, 
+      origins: Array<{
+        address: string,
+        disabled_at: string, //date
+        enabled: boolean,
+        header: {
+          Host: Array<string>,
+        },
+        name: string,
+        virtual_network_id: string,
+        weight?: number,
+      }>, 
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthParams {
+  account_identifier: string,
+  identifier: string,
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewParams {
+  account_identifier: string,
+  identifier: string,
+  allow_insecure?: boolean,
+  consecutive_down?: number,
+  consecutive_up?: number,
+  description?: string,
+  expected_body?: string,
+  expected_codes: string,
+  follow_redirects?: boolean,
+  header?: object,
+  interval?: number,
+  method?: string,
+  path?: string,
+  port?: number,
+  probe_zone?: string,
+  retries?: number,
+  timeout?: number,
+  type?: string,
+}
+
+export interface IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewResponse {
+  data: {
+    result: {
+      pools: object,
+      preview_id: string,
+    },
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+  }
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesParams {
+  account_identifier: string,
+  identifier: string,
+}
+
+export interface IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesResponse {
+  data: {
+    result: any,
+    errors: Array<{
+      code: number,
+      message: string,
+    }>,
+    messages: Array<{
+      code: number,
+      message: string,
+    }>,
+    success: boolean,
+    result_info: {
+      count: number,
+      page: number,
+      per_page: number,
+      total_count:number,
+    },
   }
 }

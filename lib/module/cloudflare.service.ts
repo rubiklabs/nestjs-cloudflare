@@ -1,7 +1,7 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { CloudflareModuleOptions, MODULE_OPTIONS_TOKEN } from "../utils";
 import { HttpService } from "@nestjs/axios";
-import { IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IDeleteAccountsByIdentifierAccessApssByUuidCaParams, IDeleteAccountsByIdentifierAccessApssByUuidCaResponse, IDeleteAccountsByIdentifierAccessBookmarksUuidParams, IDeleteAccountsByIdentifierAccessBookmarksUuidResponse, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IDeleteAccountsByIdentifierAccessCustomPagesByUuidParams, IDeleteAccountsByIdentifierAccessCustomPagesByUuidResponse, IDeleteAccountsByIdentifierAccessGroupsByUuidParams, IDeleteAccountsByIdentifierAccessGroupsByUuidResponse, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidParams, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IDeleteAccountsByIdentifierAccessServiceTokensByUuidParams, IDeleteAccountsByIdentifierAccessServiceTokensByUuidResponse, IDeleteAccountsByIdentifierAccessTagsByNameParams, IDeleteAccountsByIdentifierAccessTagsByNameResponse, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdParams, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierParams, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetAccountsByAccountIdentifierBillingProfileParams, IGetAccountsByAccountIdentifierBillingProfileResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnParams, IGetAccountsByAccountIdentifierIntelAsnByAsnResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsParams, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsResponse, IGetAccountsByIdentifierAccessAppsByAppIdParams, IGetAccountsByIdentifierAccessAppsByAppIdResponse, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksParams, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksResolve, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IGetAccountsByIdentifierAccessAppsByUuidPoliciesParams, IGetAccountsByIdentifierAccessAppsByUuidPoliciesResponse, IGetAccountsByIdentifierAccessAppsParams, IGetAccountsByIdentifierAccessAppsResponse, IGetAccountsByIdentifierAccessApssByUuidCaParams, IGetAccountsByIdentifierAccessApssByUuidCaResponse, IGetAccountsByIdentifierAccessApssCaParams, IGetAccountsByIdentifierAccessApssCaResponse, IGetAccountsByIdentifierAccessBookmarksParams, IGetAccountsByIdentifierAccessBookmarksResponse, IGetAccountsByIdentifierAccessBookmarksUuidParams, IGetAccountsByIdentifierAccessBookmarksUuidResponse, IGetAccountsByIdentifierAccessCertificatesParams, IGetAccountsByIdentifierAccessCertificatesResponse, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IGetAccountsByIdentifierAccessCertificatesSettingsParams, IGetAccountsByIdentifierAccessCertificatesSettingsResponse, IGetAccountsByIdentifierAccessCustomPagesByUuidParams, IGetAccountsByIdentifierAccessCustomPagesByUuidResponse, IGetAccountsByIdentifierAccessCustomPagesParams, IGetAccountsByIdentifierAccessCustomPagesResponse, IGetAccountsByIdentifierAccessGroupsByUuidParams, IGetAccountsByIdentifierAccessGroupsByUuidResponse, IGetAccountsByIdentifierAccessGroupsParams, IGetAccountsByIdentifierAccessGroupsResponse, IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams, IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IGetAccountsByIdentifierAccessIdentityProvidersParams, IGetAccountsByIdentifierAccessIdentityProvidersResponse, IGetAccountsByIdentifierAccessKeysParams, IGetAccountsByIdentifierAccessKeysResponse, IGetAccountsByIdentifierAccessLogsAccessRequestParams, IGetAccountsByIdentifierAccessLogsAccessRequestResponse, IGetAccountsByIdentifierAccessServiceTokensParams, IGetAccountsByIdentifierAccessServiceTokensResponse, IGetAccountsByIdentifierAccessTagsByNameParams, IGetAccountsByIdentifierAccessTagsByNameResponse, IGetAccountsByIdentifierAccessTagsParams, IGetAccountsByIdentifierAccessTagsResponse, IGetZonesByZoneIdApiGatewayConfigurationParams, IGetZonesByZoneIdApiGatewayConfigurationResponse, IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams, IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse, IGetZonesByZoneIdApiGatewayDiscoveryParams, IGetZonesByZoneIdApiGatewayDiscoveryResponse, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IGetZonesByZoneIdApiGatewayOperationsOperationsIdParams, IGetZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IGetZonesByZoneIdApiGatewayOperationsParams, IGetZonesByZoneIdApiGatewayOperationsResponse, IGetZonesByZoneIdApiGatewaySchemasParams, IGetZonesByZoneIdApiGatewaySchemasResponse, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IGetZonesByZoneIdApiGatewayUserSchemasParams, IGetZonesByZoneIdApiGatewayUserSchemasResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse, IGetZonesByZoneIdentifierClientCertificatesIdentifierParams, IGetZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetZonesByZoneIdentifierClientCertificatesParams, IGetZonesByZoneIdentifierClientCertificatesResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IPatchZonesByZoneIdentifierClientCertificatesIdentifierParams, IPatchZonesByZoneIdentifierClientCertificatesIdentifierResponse, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensParams, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensResolve, IPostAccountsByIdentifierAccessAppsByUuidPoliciesParams, IPostAccountsByIdentifierAccessAppsByUuidPoliciesResponse, IPostAccountsByIdentifierAccessAppsParams, IPostAccountsByIdentifierAccessAppsResponse, IPostAccountsByIdentifierAccessApssByUuidCaParams, IPostAccountsByIdentifierAccessApssByUuidCaResponse, IPostAccountsByIdentifierAccessBookmarksUuidParams, IPostAccountsByIdentifierAccessBookmarksUuidResponse, IPostAccountsByIdentifierAccessCertificatesParams, IPostAccountsByIdentifierAccessCertificatesResponse, IPostAccountsByIdentifierAccessCustomPagesParams, IPostAccountsByIdentifierAccessCustomPagesResponse, IPostAccountsByIdentifierAccessIdentityProvidersParams, IPostAccountsByIdentifierAccessIdentityProvidersResponse, IPostAccountsByIdentifierAccessKeysRotateParams, IPostAccountsByIdentifierAccessKeysRotateResponse, IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshParams, IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshResponse, IPostAccountsByIdentifierAccessServiceTokensByUuidRotateParams, IPostAccountsByIdentifierAccessServiceTokensByUuidRotateResponse, IPostAccountsByIdentifierAccessServiceTokensParams, IPostAccountsByIdentifierAccessServiceTokensResponse, IPostAccountsByIdentifierAccessTagsParams, IPostAccountsByIdentifierAccessTagsResponse, IPostZonesByZoneIdApiGatewayOperationsParams, IPostZonesByZoneIdApiGatewayOperationsResponse, IPostZonesByZoneIdApiGatewayUserSchemasParams, IPostZonesByZoneIdApiGatewayUserSchemasResponse, IPostZonesByZoneIdentifierClientCertificatesParams, IPostZonesByZoneIdentifierClientCertificatesResponse, IPutAccountsByIdentifierAccessAppsByAppIdParams, IPutAccountsByIdentifierAccessAppsByAppIdResponse, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IPutAccountsByIdentifierAccessBookmarksUuidParams, IPutAccountsByIdentifierAccessBookmarksUuidResponse, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IPutAccountsByIdentifierAccessCustomPagesByUuidParams, IPutAccountsByIdentifierAccessCustomPagesByUuidResponse, IPutAccountsByIdentifierAccessGroupsByUuidParams, IPutAccountsByIdentifierAccessGroupsByUuidResponse, IPutAccountsByIdentifierAccessGroupsParams, IPutAccountsByIdentifierAccessGroupsResponse, IPutAccountsByIdentifierAccessKeysParams, IPutAccountsByIdentifierAccessKeysResponse, IPutAccountsByIdentifierAccessServiceTokensByUuidParams, IPutAccountsByIdentifierAccessServiceTokensByUuidResponse, IPutAccountsByIdentifierAccessTagsByNameParams, IPutAccountsByIdentifierAccessTagsByNameResponse, IPutZonesByZoneIdApiGatewayConfigurationParams, IPutZonesByZoneIdApiGatewayConfigurationResponse, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse } from "./index.d"
+import { IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams, IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse, IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams, IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse, IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IDeleteAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IDeleteAccountsByIdentifierAccessApssByUuidCaParams, IDeleteAccountsByIdentifierAccessApssByUuidCaResponse, IDeleteAccountsByIdentifierAccessBookmarksUuidParams, IDeleteAccountsByIdentifierAccessBookmarksUuidResponse, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IDeleteAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IDeleteAccountsByIdentifierAccessCustomPagesByUuidParams, IDeleteAccountsByIdentifierAccessCustomPagesByUuidResponse, IDeleteAccountsByIdentifierAccessGroupsByUuidParams, IDeleteAccountsByIdentifierAccessGroupsByUuidResponse, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidParams, IDeleteAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IDeleteAccountsByIdentifierAccessServiceTokensByUuidParams, IDeleteAccountsByIdentifierAccessServiceTokensByUuidResponse, IDeleteAccountsByIdentifierAccessTagsByNameParams, IDeleteAccountsByIdentifierAccessTagsByNameResponse, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdParams, IDeleteZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IDeleteZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierParams, IDeleteZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetAccountsByAccountIdentifierBillingProfileParams, IGetAccountsByAccountIdentifierBillingProfileResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnParams, IGetAccountsByAccountIdentifierIntelAsnByAsnResponse, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsParams, IGetAccountsByAccountIdentifierIntelAsnByAsnSubnetsResponse, IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams, IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesParams, IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesResponse, IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse, IGetAccountsByAccountIdentifierLoadBalancersMonitorsParams, IGetAccountsByAccountIdentifierLoadBalancersMonitorsResponse, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthParams, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthResponse, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesParams, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesResponse, IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse, IGetAccountsByAccountIdentifierLoadBalancersPoolsParams, IGetAccountsByAccountIdentifierLoadBalancersPoolsResponse, IGetAccountsByIdentifierAccessAppsByAppIdParams, IGetAccountsByIdentifierAccessAppsByAppIdResponse, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksParams, IGetAccountsByIdentifierAccessAppsByAppIdUserPolicyChecksResolve, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IGetAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IGetAccountsByIdentifierAccessAppsByUuidPoliciesParams, IGetAccountsByIdentifierAccessAppsByUuidPoliciesResponse, IGetAccountsByIdentifierAccessAppsParams, IGetAccountsByIdentifierAccessAppsResponse, IGetAccountsByIdentifierAccessApssByUuidCaParams, IGetAccountsByIdentifierAccessApssByUuidCaResponse, IGetAccountsByIdentifierAccessApssCaParams, IGetAccountsByIdentifierAccessApssCaResponse, IGetAccountsByIdentifierAccessBookmarksParams, IGetAccountsByIdentifierAccessBookmarksResponse, IGetAccountsByIdentifierAccessBookmarksUuidParams, IGetAccountsByIdentifierAccessBookmarksUuidResponse, IGetAccountsByIdentifierAccessCertificatesParams, IGetAccountsByIdentifierAccessCertificatesResponse, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IGetAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IGetAccountsByIdentifierAccessCertificatesSettingsParams, IGetAccountsByIdentifierAccessCertificatesSettingsResponse, IGetAccountsByIdentifierAccessCustomPagesByUuidParams, IGetAccountsByIdentifierAccessCustomPagesByUuidResponse, IGetAccountsByIdentifierAccessCustomPagesParams, IGetAccountsByIdentifierAccessCustomPagesResponse, IGetAccountsByIdentifierAccessGroupsByUuidParams, IGetAccountsByIdentifierAccessGroupsByUuidResponse, IGetAccountsByIdentifierAccessGroupsParams, IGetAccountsByIdentifierAccessGroupsResponse, IGetAccountsByIdentifierAccessIdentityProvidersByUuidParams, IGetAccountsByIdentifierAccessIdentityProvidersByUuidResponse, IGetAccountsByIdentifierAccessIdentityProvidersParams, IGetAccountsByIdentifierAccessIdentityProvidersResponse, IGetAccountsByIdentifierAccessKeysParams, IGetAccountsByIdentifierAccessKeysResponse, IGetAccountsByIdentifierAccessLogsAccessRequestParams, IGetAccountsByIdentifierAccessLogsAccessRequestResponse, IGetAccountsByIdentifierAccessServiceTokensParams, IGetAccountsByIdentifierAccessServiceTokensResponse, IGetAccountsByIdentifierAccessTagsByNameParams, IGetAccountsByIdentifierAccessTagsByNameResponse, IGetAccountsByIdentifierAccessTagsParams, IGetAccountsByIdentifierAccessTagsResponse, IGetZonesByZoneIdApiGatewayConfigurationParams, IGetZonesByZoneIdApiGatewayConfigurationResponse, IGetZonesByZoneIdApiGatewayDiscoveryOperationsParams, IGetZonesByZoneIdApiGatewayDiscoveryOperationsResponse, IGetZonesByZoneIdApiGatewayDiscoveryParams, IGetZonesByZoneIdApiGatewayDiscoveryResponse, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IGetZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IGetZonesByZoneIdApiGatewayOperationsOperationsIdParams, IGetZonesByZoneIdApiGatewayOperationsOperationsIdResponse, IGetZonesByZoneIdApiGatewayOperationsParams, IGetZonesByZoneIdApiGatewayOperationsResponse, IGetZonesByZoneIdApiGatewaySchemasParams, IGetZonesByZoneIdApiGatewaySchemasResponse, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IGetZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IGetZonesByZoneIdApiGatewayUserSchemasParams, IGetZonesByZoneIdApiGatewayUserSchemasResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdOperationsResponse, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IGetZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IGetZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse, IGetZonesByZoneIdentifierClientCertificatesIdentifierParams, IGetZonesByZoneIdentifierClientCertificatesIdentifierResponse, IGetZonesByZoneIdentifierClientCertificatesParams, IGetZonesByZoneIdentifierClientCertificatesResponse, IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams, IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse, IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams, IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse, IPatchAccountsByAccountIdentifierLoadBalancersPoolsParams, IPatchAccountsByAccountIdentifierLoadBalancersPoolsResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdParams, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsByOperationIdResponse, IPatchZonesByZoneIdApiGatewayDiscoveryOperationsParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationParams, IPatchZonesByZoneIdApiGatewayOperationsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPatchZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdParams, IPatchZonesByZoneIdApiGatewayUserSchemasSchemaIdResponse, IPatchZonesByZoneIdentifierClientCertificatesIdentifierParams, IPatchZonesByZoneIdentifierClientCertificatesIdentifierResponse, IPoolsAccountsByAccountIdentifierLoadBalancersPoolsParams, IPoolsAccountsByAccountIdentifierLoadBalancersPoolsResponse, IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewParams, IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewResponse, IPostAccountsByAccountIdentifierLoadBalancersMonitorsParams, IPostAccountsByAccountIdentifierLoadBalancersMonitorsResponse, IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewParams, IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewResponse, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensParams, IPostAccountsByIdentifierAccessAppsByAppIdRevokeTokensResolve, IPostAccountsByIdentifierAccessAppsByUuidPoliciesParams, IPostAccountsByIdentifierAccessAppsByUuidPoliciesResponse, IPostAccountsByIdentifierAccessAppsParams, IPostAccountsByIdentifierAccessAppsResponse, IPostAccountsByIdentifierAccessApssByUuidCaParams, IPostAccountsByIdentifierAccessApssByUuidCaResponse, IPostAccountsByIdentifierAccessBookmarksUuidParams, IPostAccountsByIdentifierAccessBookmarksUuidResponse, IPostAccountsByIdentifierAccessCertificatesParams, IPostAccountsByIdentifierAccessCertificatesResponse, IPostAccountsByIdentifierAccessCustomPagesParams, IPostAccountsByIdentifierAccessCustomPagesResponse, IPostAccountsByIdentifierAccessIdentityProvidersParams, IPostAccountsByIdentifierAccessIdentityProvidersResponse, IPostAccountsByIdentifierAccessKeysRotateParams, IPostAccountsByIdentifierAccessKeysRotateResponse, IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshParams, IPostAccountsByIdentifierAccessServiceTokensByUuidRefreshResponse, IPostAccountsByIdentifierAccessServiceTokensByUuidRotateParams, IPostAccountsByIdentifierAccessServiceTokensByUuidRotateResponse, IPostAccountsByIdentifierAccessServiceTokensParams, IPostAccountsByIdentifierAccessServiceTokensResponse, IPostAccountsByIdentifierAccessTagsParams, IPostAccountsByIdentifierAccessTagsResponse, IPostZonesByZoneIdApiGatewayOperationsParams, IPostZonesByZoneIdApiGatewayOperationsResponse, IPostZonesByZoneIdApiGatewayUserSchemasParams, IPostZonesByZoneIdApiGatewayUserSchemasResponse, IPostZonesByZoneIdentifierClientCertificatesParams, IPostZonesByZoneIdentifierClientCertificatesResponse, IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams, IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse, IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams, IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse, IPutAccountsByIdentifierAccessAppsByAppIdParams, IPutAccountsByIdentifierAccessAppsByAppIdResponse, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidParams, IPutAccountsByIdentifierAccessAppsByUuid1PoliciesByUuidResponse, IPutAccountsByIdentifierAccessBookmarksUuidParams, IPutAccountsByIdentifierAccessBookmarksUuidResponse, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidParams, IPutAccountsByIdentifierAccessCertificatesSettingsByUuidResponse, IPutAccountsByIdentifierAccessCustomPagesByUuidParams, IPutAccountsByIdentifierAccessCustomPagesByUuidResponse, IPutAccountsByIdentifierAccessGroupsByUuidParams, IPutAccountsByIdentifierAccessGroupsByUuidResponse, IPutAccountsByIdentifierAccessGroupsParams, IPutAccountsByIdentifierAccessGroupsResponse, IPutAccountsByIdentifierAccessKeysParams, IPutAccountsByIdentifierAccessKeysResponse, IPutAccountsByIdentifierAccessServiceTokensByUuidParams, IPutAccountsByIdentifierAccessServiceTokensByUuidResponse, IPutAccountsByIdentifierAccessTagsByNameParams, IPutAccountsByIdentifierAccessTagsByNameResponse, IPutZonesByZoneIdApiGatewayConfigurationParams, IPutZonesByZoneIdApiGatewayConfigurationResponse, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationParams, IPutZonesByZoneIdApiGatewayOperationsOperationIdSchemaValidationResponse, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationParams, IPutZonesByZoneIdApiGatewaySettingsSchemaValidationResponse, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsParams, IPutZonesByZoneIdentifierCertificateAuthoritiesHostnameAssociationsResponse } from "./index.d"
 
 @Injectable()
 export class CloudflareService {
@@ -1548,7 +1548,7 @@ export class CloudflareService {
     };
   }
 
-  //Buna dikkat. Bu ileride kaldırılacak diyor. Ve parametre türü yok. 
+  //Buna dikkat. Bu ileride kaldırılacak diyor. 
   // https://developers.cloudflare.com/api/operations/account-billing-profile-(-deprecated)-billing-profile-details
 
   getAccountsByAccountIdentifierBillingProfile = async ({ account_identifier }: IGetAccountsByAccountIdentifierBillingProfileParams): Promise<IGetAccountsByAccountIdentifierBillingProfileResponse> => {
@@ -1563,10 +1563,532 @@ export class CloudflareService {
     };
   }
 
-  // Account Load Balancer Monitors Starts
+  getAccountsByAccountIdentifierLoadBalancersMonitors = async ({ account_identifier }: IGetAccountsByAccountIdentifierLoadBalancersMonitorsParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersMonitorsResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/monitors`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
 
+  postAccountsByAccountIdentifierLoadBalancersMonitors = async ({ account_identifier, allow_insecure, consecutive_down, consecutive_up, description, expected_body, expected_codes, follow_redirects, header, interval, method, path, port, probe_zone, retries, timeout, type
+  }: IPostAccountsByAccountIdentifierLoadBalancersMonitorsParams): Promise<IPostAccountsByAccountIdentifierLoadBalancersMonitorsResponse> => {
+    this.httpService.post(this.url + `/accounts/${account_identifier}/load_balancers/monitors`)
+    return {
+      data: {
+        result: {
+          allow_insecure: false,
+          consecutive_down: 0,
+          consecutive_up: 0,
+          description: "",
+          expected_body: "",
+          expected_codes: "",
+          follow_redirects: false,
+          header: {},
+          interval: 60,
+          method: "",
+          path: "",
+          port: 0,
+          probe_zone: "",
+          retries: 2,
+          timeout: 5,
+          type: "",
+          created_on: "", 
+          id: "",
+          modified_on: "", 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  deleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifier = async ({ account_identifier, identifier }: IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams): Promise<IDeleteAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse> => {
+    this.httpService.delete(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
 
+  getAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifier = async ({ account_identifier, identifier }: IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}`)
+    return {
+      data: {
+        result: {
+          allow_insecure: false,
+          consecutive_down: 0,
+          consecutive_up: 0,
+          description: "",
+          expected_body: "",
+          expected_codes: "",
+          follow_redirects: false,
+          header: {},
+          interval: 60,
+          method: "",
+          path: "",
+          port: 0,
+          probe_zone: "",
+          retries: 2,
+          timeout: 5,
+          type: "",
+          created_on: "", 
+          id: "",
+          modified_on: "", 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  patchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifier = async ({ account_identifier, identifier, allow_insecure, consecutive_down, consecutive_up, description, expected_body, expected_codes, follow_redirects, header, interval, method, path, port, probe_zone, retries, timeout, type }: IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams): Promise<IPatchAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse> => {
+    this.httpService.patch(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}`)
+    return {
+      data: {
+        result: {
+          allow_insecure: false,
+          consecutive_down: 0,
+          consecutive_up: 0,
+          description: "",
+          expected_body: "",
+          expected_codes: "",
+          follow_redirects: false,
+          header: {},
+          interval: 60,
+          method: "",
+          path: "",
+          port: 0,
+          probe_zone: "",
+          retries: 2,
+          timeout: 5,
+          type: "",
+          created_on: "", 
+          id: "",
+          modified_on: "", 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  putAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifier = async ({ account_identifier, identifier, allow_insecure, consecutive_down, consecutive_up, description, expected_body, expected_codes, follow_redirects, header, interval, method, path, port, probe_zone, retries, timeout, type }: IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierParams): Promise<IPutAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierResponse> => {
+    this.httpService.put(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}`)
+    return {
+      data: {
+        result: {
+          allow_insecure: false,
+          consecutive_down: 0,
+          consecutive_up: 0,
+          description: "",
+          expected_body: "",
+          expected_codes: "",
+          follow_redirects: false,
+          header: {},
+          interval: 60,
+          method: "",
+          path: "",
+          port: 0,
+          probe_zone: "",
+          retries: 2,
+          timeout: 5,
+          type: "",
+          created_on: "", 
+          id: "",
+          modified_on: "", 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  postAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreview = async ({ account_identifier, identifier, allow_insecure, consecutive_down, consecutive_up, description, expected_body, expected_codes, follow_redirects, header, interval, method, path, port, probe_zone, retries, timeout, type }: IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewParams): Promise<IPostAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewResponse> => {
+    this.httpService.post(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}/preview`)
+    return {
+      data: {
+        result: {
+          pools: {},
+          preview_id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferences = async ({ account_identifier, identifier }: IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierReferencesResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/monitors/${identifier}/references`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersPreviewByPreviewId = async ({ account_identifier, preview_id }: IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersMonitorsByIdentifierPreviewResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/preview/${preview_id}`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersPools = async ({ account_identifier, monitor }: IGetAccountsByAccountIdentifierLoadBalancersPoolsParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersPoolsResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/pools`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
+
+  patchAccountsByAccountIdentifierLoadBalancersPools = async ({ account_identifier, notification_email }: IPatchAccountsByAccountIdentifierLoadBalancersPoolsParams): Promise<IPatchAccountsByAccountIdentifierLoadBalancersPoolsResponse> => {
+    this.httpService.patch(this.url + `/accounts/${account_identifier}/load_balancers/pools`)
+    return {
+      data: {
+        result: "",
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
+
+  postAccountsByAccountIdentifierLoadBalancersPools = async ({ account_identifier, description, enabled, latitude, load_shedding, longitude, minimum_origins, monitor, name, notification_email, notification_filter, origin_steering, origins, weight  }: IPoolsAccountsByAccountIdentifierLoadBalancersPoolsParams): Promise<IPoolsAccountsByAccountIdentifierLoadBalancersPoolsResponse> => {
+    this.httpService.post(this.url + `/accounts/${account_identifier}/load_balancers/pools`)
+    return {
+      data: {
+        result: {
+          check_regions: [""],
+          created_on: "",
+          description: "",
+          disabled_at: "", 
+          enabled: true,
+          id: "",
+          latitude: 1,
+          load_shedding: {
+            default_percent: 0,
+            default_policy: "",
+            session_percent: 0,
+            session_policy: "",
+          },
+          longitude: 1,
+          minimum_origins: 1,
+          modified_on: "",
+          monitor: "",
+          name: "",
+          notification_email: "",
+          notification_filter: {
+            origin: {
+              disabled: false,
+              healthy: true,
+            },
+            pool: {
+              disabled: false,
+              healthy: true,
+            },
+          }, 
+          origin_steering: {
+            policy: "",
+          }, 
+          origins: [{
+            address: "",
+            disabled_at: "", 
+            enabled: true,
+            header: {
+              Host: [""],
+            },
+            name: "",
+            virtual_network_id: "",
+            weight: 1,
+          }], 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+  
+  deleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifier = async ({ account_identifier, identifier }: IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams): Promise<IDeleteAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse> => {
+    this.httpService.delete(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}`)
+    return {
+      data: {
+        result: {
+          id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersPoolsByIdentifier = async ({ account_identifier, identifier }: IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}`)
+    return {
+      data: {
+        result: {
+          check_regions: [""],
+          created_on: "",
+          description: "",
+          disabled_at: "", 
+          enabled: true,
+          id: "",
+          latitude: 1,
+          load_shedding: {
+            default_percent: 0,
+            default_policy: "",
+            session_percent: 0,
+            session_policy: "",
+          },
+          longitude: 1,
+          minimum_origins: 1,
+          modified_on: "",
+          monitor: "",
+          name: "",
+          notification_email: "",
+          notification_filter: {
+            origin: {
+              disabled: false,
+              healthy: true,
+            },
+            pool: {
+              disabled: false,
+              healthy: true,
+            },
+          }, 
+          origin_steering: {
+            policy: "",
+          }, 
+          origins: [{
+            address: "",
+            disabled_at: "", 
+            enabled: true,
+            header: {
+              Host: [""],
+            },
+            name: "",
+            virtual_network_id: "",
+            weight: 1,
+          }], 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  patchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifier = async ({ account_identifier, identifier, check_regions, description, enabled, latitude, load_shedding, longitude, minimum_origins, monitor, name, notification_email, notification_filter, origin_steering, origins, weight  }: IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams): Promise<IPatchAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse> => {
+    this.httpService.patch(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}`)
+    return {
+      data: {
+        result: {
+          check_regions: [""],
+          created_on: "",
+          description: "",
+          disabled_at: "", 
+          enabled: true,
+          id: "",
+          latitude: 1,
+          load_shedding: {
+            default_percent: 0,
+            default_policy: "",
+            session_percent: 0,
+            session_policy: "",
+          },
+          longitude: 1,
+          minimum_origins: 1,
+          modified_on: "",
+          monitor: "",
+          name: "",
+          notification_email: "",
+          notification_filter: {
+            origin: {
+              disabled: false,
+              healthy: true,
+            },
+            pool: {
+              disabled: false,
+              healthy: true,
+            },
+          }, 
+          origin_steering: {
+            policy: "",
+          }, 
+          origins: [{
+            address: "",
+            disabled_at: "", 
+            enabled: true,
+            header: {
+              Host: [""],
+            },
+            name: "",
+            virtual_network_id: "",
+            weight: 1,
+          }], 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  putAccountsByAccountIdentifierLoadBalancersPoolsByIdentifier = async ({ account_identifier, identifier, check_regions, description, enabled, latitude, load_shedding, longitude, minimum_origins, monitor, name, notification_email, notification_filter, origin_steering, origins, weight  }: IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierParams): Promise<IPutAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierResponse> => {
+    this.httpService.put(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}`)
+    return {
+      data: {
+        result: {
+          check_regions: [""],
+          created_on: "",
+          description: "",
+          disabled_at: "", 
+          enabled: true,
+          id: "",
+          latitude: 1,
+          load_shedding: {
+            default_percent: 0,
+            default_policy: "",
+            session_percent: 0,
+            session_policy: "",
+          },
+          longitude: 1,
+          minimum_origins: 1,
+          modified_on: "",
+          monitor: "",
+          name: "",
+          notification_email: "",
+          notification_filter: {
+            origin: {
+              disabled: false,
+              healthy: true,
+            },
+            pool: {
+              disabled: false,
+              healthy: true,
+            },
+          }, 
+          origin_steering: {
+            policy: "",
+          }, 
+          origins: [{
+            address: "",
+            disabled_at: "", 
+            enabled: true,
+            header: {
+              Host: [""],
+            },
+            name: "",
+            virtual_network_id: "",
+            weight: 1,
+          }], 
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealth = async ({ account_identifier, identifier  }: IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierHealthResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}/health`)
+    return {
+      data: {
+        result: {},
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  postAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreview = async ({ account_identifier, identifier, allow_insecure, consecutive_down, consecutive_up, description, expected_body, expected_codes, follow_redirects, header, interval, method, path, port, probe_zone, retries, timeout, type  }: IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewParams): Promise<IPostAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierPreviewResponse> => {
+    this.httpService.post(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}/preview`)
+    return {
+      data: {
+        result: {
+          pools: {},
+          preview_id: "",
+        },
+        errors: [],
+        messages: [],
+        success: true,
+      }
+    };
+  }
+
+  getAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferences = async ({ account_identifier, identifier }: IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesParams): Promise<IGetAccountsByAccountIdentifierLoadBalancersPoolsByIdentifierReferencesResponse> => {
+    this.httpService.get(this.url + `/accounts/${account_identifier}/load_balancers/pools/${identifier}/references`)
+    return {
+      data: {
+        result: {},
+        errors: [],
+        messages: [],
+        success: true,
+        result_info: {
+          count: 1,
+          page: 1,
+          per_page: 20,
+          total_count: 0,
+        },
+      }
+    };
+  }
+
+  // Account Load Balancer Search Starts
 
 
 
